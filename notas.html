@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Notas</h1>
+    <input id="Nota" type="number">
+    <button id="butao">Catiau</button>
+</body>
+<script>
+    document.querySelector('#butao').addEventListener("click", function(){
+        let nota = document.getElementById ('Nota').value;
+        if(nota <= 100 && nota >= 80){
+            document.write('A')
+        }
+        if(nota <= 79 && nota >= 60){
+            document.write('B')
+        }
+        if(nota <= 59 && nota >= 40){
+            document.write('C')
+        }
+        if(nota <= 39 && nota >= 20){
+            document.write('D')
+        }
+        if(nota <= 19 && nota >= 1){
+            document.write('E')
+        }
+        if(nota <= 0){
+            document.write('F')
+        }        
+    })
+</script>
+</html>

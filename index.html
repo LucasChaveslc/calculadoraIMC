@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">  
+        <link rel="stylesheet" href="index.css">
+        <title>Calculadora</title>
+    </head>
+    <body style="background-color: OldLace"> 
+        <h1 class="DdC"><strong>Dispositivo de Calcular</strong></h1>
+        <div style="display:flex">
+            <div class="Organizar">
+                <p style="margin-top: 17px;">Faça sua Soma</p>
+                <input id="numero1" type="number" placeholder=""> +
+                <input id="numero2" type="number" placeholder=""> =
+            </div>
+            <div class="resultadoSoma">
+                <p id="resultadoSoma" style="margin-top: 28px;">0</p>
+            </div>
+            <button class="butao" id="butao1">Calcular</button>
+        </div>
+        <div style="display:flex">
+            <div class="Organizar">
+                <p style="margin-top: 17px;">Faça sua Subtraçao</p>
+                <input id="subtraçao1" type="number" placeholder=""> -
+                <input id="subtraçao2" type="number" placeholder=""> =
+            </div>
+            <div class="resultadoSoma">
+                <p id="resultadoSubtração" style="margin-top: 28px;">0</p>
+            </div>
+            <button class="butao 2" id="butao2" onClick="subtracao()">Calcular</button>
+        </div>
+        <div style="display:flex">
+            <div class="Organizar">
+                <p style="margin-top: 17px;">Faça sua Multiplicaçao</p>
+                <input id="multiplicaçao1" type="number" placeholder=""> X
+                <input id="multiplicaçao2" type="number" placeholder=""> =
+            </div>
+            <div class="resultadoSoma">
+                <p id="resultadoMultiplicaçao" style="margin-top: 28px;">0</p>
+            </div>
+            <button class="butao 2" id="butao3" onClick="multiplicaçao()">Calcular</button>
+        </div>
+        <div style="display:flex">
+                <div class="Organizar">
+                    <p style="margin-top: 17px;">Faça sua Divisao</p>
+                    <input id="divisao1" type="number" placeholder=""> /
+                    <input id="divisao2" type="number" placeholder=""> =
+                </div>
+                <div class="resultadosoma">
+                    <p id="resultadoDivisao" style="margin-top: 28px;">0</p>
+                </div>
+                <button class="butao 2" id="butao4" onClick="divisao()">Calcular</button>
+            </div>
+        <script>
+            document.querySelector('#butao1').addEventListener("click", function() {
+                console.log("teste")
+                let numero1 = document.getElementById('numero1').value;
+                let numero2 = document.getElementById('numero2').value;
+                let resultadoSoma = document.getElementById('resultadoSoma');
+                let resposta = parseInt(numero1) + parseInt(numero2);
+                document.getElementById("resultadoSoma").innerHTML= resposta; 
+            });
+            function subtracao() {
+                let subtraçao1 = document.getElementById('subtraçao1').value;
+                let subtraçao2 = document.getElementById('subtraçao2').value;
+                let resultadoSubtração = document.getElementById('resultadoSubtração');
+                let resultado = +subtraçao1 - +subtraçao2;
+                resultadoSubtração.innerHTML= resultado;
+            }
+            function multiplicaçao(){
+                let multiplicaçao1 = document.getElementById('multiplicaçao1').value;
+                let multiplicaçao2 = document.getElementById('multiplicaçao2').value;
+                let resultadoMultiplicaçao = document.getElementById('resultadoMultiplicaçao');
+                let resultado3 = +multiplicaçao1 * +multiplicaçao2;
+                resultadoMultiplicaçao.innerHTML= resultado3;
+            }
+            function divisao(){
+                let divisao1 = document.getElementById('divisao1').value;
+                let divisao2 = document.getElementById('divisao2').value;
+                let resultadoDivisao = document.getElementById('resultadoDivisao');
+                let resultado4 = +divisao1 / +divisao2;
+                resultadoDivisao.innerHTML= resultado4;
+            }
+        </script>
+    </body>
+    
+</html>

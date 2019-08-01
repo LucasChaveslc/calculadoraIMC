@@ -1,0 +1,19 @@
+.DdC{
+    text-align: center;
+    color: black;
+    background-color: brown;
+}
+.Organizar{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.butao{
+    padding: 10px;
+    margin: 15px;
+    color: white;
+    background-color: red;
+    border-style: dashed;
+    border-radius: 90%;
+    cursor: -webkit-grab;
+}

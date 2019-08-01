@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora de IMC</title>
+    </head>
+    <body>
+        <div>
+            <h1>calculadora de IMC</h1>
+            <p>Peso</p>
+            <input id="peso" type="number"> kg
+            <p>altura</p>
+            <input id="altura" type="number"> m
+            <button id="butao">Calcular IMC</button>           
+        </div>
+    </body>
+    <script>
+        document.querySelector('#butao').addEventListener("click", function(){
+            let peso = document.getElementById('peso').value;
+            let altura = document.getElementById('altura').value;
+            let resposta = +altura* +altura;
+            let resposta2 = +peso / +resposta;
+            if(resposta2 >= 18 && resposta2 <= 24.9){
+                document.write("peso normal")
+            }
+            if(resposta2 >= 25 && resposta2 <= 30){
+                document.write("acima do peso")
+            }
+            if(resposta2 >= 30){
+                document.write("obesidade")
+            } 
+        })
+    </script>
+</html>

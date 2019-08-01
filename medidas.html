@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>vamos descobrir</h1>
+    <p>altura</p>
+    <input id="altura" type="number">
+    <p>largura</p>
+    <input id="largura" type="number">
+    <button id="butao">descubra</button>
+</body>
+<script>
+    document.querySelector('#butao').addEventListener("click", function(){
+        console.log('click')
+        let altura = document.getElementById('altura').value;       
+        let largura = document.getElementById('largura').value;       
+        if(altura < largura){
+            document.write('horizontal')
+        }
+        if(altura > largura){
+            document.write('vertical')
+        }       
+    })
+</script>
+</html>

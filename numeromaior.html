@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>n sei que finalidade isso tem kkk</h1>
+    <p>A</p>
+    <input id="numero1" type="number" value="10">
+    <p>B</p>
+    <input id="numero2" type="number" value="9">
+    <button id="butao">UAU</button>
+</body>
+<script>
+    document.querySelector('#butao').addEventListener("click", function(){
+        let numero1 = document.getElementById('numero1').value;
+        let numero2 = document.getElementById('numero2').value;
+
+        if(parseFloat(numero1) > parseFloat(numero2)){
+            document.write("Letra A é maior")
+        } else if(parseFloat(numero2) > parseFloat(numero1)){
+            document.write("Letra B é maior")
+        }
+    })
+</script>
+</html>
